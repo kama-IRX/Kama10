@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #0f172a;
+  color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 16px;
+}
+
+.page {
+  width: 100%;
+  max-width: 280px;
+}
+
+/* Вертикальное меню через Flexbox */
+.vertical-menu {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+.vertical-menu__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.vertical-menu__item {
+  width: 100%;
+}
+
+.vertical-menu__link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #94a3b8;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.vertical-menu__icon {
+  flex-shrink: 0;
+  stroke: currentColor;
+}
+
+.vertical-menu__text {
+  flex-grow: 1;
+}
+
+.vertical-menu__link:hover {
+  background-color: #334155;
+  color: #ffffff;
+}
+
+/* Активный пункт */
+.vertical-menu__link--active,
+.vertical-menu__link.active {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.vertical-menu__link--active:hover,
+.vertical-menu__link.active:hover {
+  background-color: #2563eb;
+}
